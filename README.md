@@ -17,11 +17,6 @@ The system consists of:
 - **Backend**: Services for OAuth handling, PR review, and posting reviews as comments.
 - **AI Model**: An AI model (like OpenAI’s Codex) to analyze and review pull requests.
 - **Database**: For storing GitHub OAuth tokens securely.
-
-### Architecture Diagram
-
-![Architecture Diagram](./path-to-your-diagram)
-
 ---
 
 ## Prerequisites
