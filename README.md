@@ -119,12 +119,6 @@ The system consists of:
 
 ---
 
-## License
-
-This project is licensed under the MIT License.
-
----
-
 ## Contributing
 
 Feel free to open issues or pull requests for any improvements. Contributions are welcome!
