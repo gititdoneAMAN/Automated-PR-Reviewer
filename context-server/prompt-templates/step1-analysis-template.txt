@@ -1,0 +1,15 @@
+I have a file named "{{fileName}}" from a codebase written in {{language}}. Below is the content of the file:
+
+----------------------------
+{{fileContent}}
+----------------------------
+
+Please provide a concise and comprehensive analysis of this file. Your analysis should include:
+
+1. **Summary**: A brief overview of what the file does.
+2. **Code Quality**: Comments on readability, structure, and adherence to best practices.
+3. **Potential Issues**: Identification of any bugs, performance concerns, or security vulnerabilities.
+4. **Improvements**: Suggestions for refactoring or enhancing the code.
+5. **Contextual Relevance**: How the file fits within a typical codebase (if applicable).
+
+Please keep the response concise but detailed enough to be actionable.
