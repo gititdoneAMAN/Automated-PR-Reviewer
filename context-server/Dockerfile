@@ -12,6 +12,7 @@ RUN apt-get update && \
 WORKDIR /home/app
 
 COPY main.sh .
+COPY kafka.js .
 COPY script.js .
 COPY package*.json .
 

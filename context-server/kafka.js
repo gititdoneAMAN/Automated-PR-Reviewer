@@ -3,13 +3,13 @@ const { Kafka } = require('kafkajs');
 
 const kafka = new Kafka({
   clientId: process.env.KAFKA_CLIENT_ID || 'my-app',
-  brokers: [process.env.KAFKA_BROKER || '127.0.0.1:9092'],
+  brokers: [process.env.KAFKA_BROKER || '192.168.101.73:9092'],
 });
 
 const producer = kafka.producer();
 const consumer = kafka.consumer({ groupId: 'my-app3' });
 
-const topic = process.env.KAFKA_TOPIC || 'test-topic';
+const topic = process.env.KAFKA_TOPIC || 'code-events';
 
 let isProducerConnected = false;
 let isConsumerConnected = false;
@@ -33,11 +33,12 @@ async function initConsumer() {
 async function produce(message) {
   try {
     await initProducer();
-    await producer.send({
+    const response = await producer.send({
       topic,
       messages: [{ value: message }],
       retry: { retries: 5 },
     });
+    console.log('Message sent:', message, 'Response:', response);
   } catch (error) {
     console.error('Error in producer:', error);
   }
@@ -55,6 +56,7 @@ async function consume() {
             offset: message.offset,
             value: message?.value?.toString(),
           });
+          console.log('-------------------WE WORK HERE------------------');
         } catch (error) {
           console.error('Error processing message:', error);
         }
