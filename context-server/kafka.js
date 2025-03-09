@@ -56,6 +56,12 @@ async function consume() {
             offset: message.offset,
             value: message?.value?.toString(),
           });
+
+          const { value } = message;
+          console.log('########################');
+          console.log(JSON.parse(value).fileContent);
+          console.log('########################');
+
           console.log('-------------------WE WORK HERE------------------');
         } catch (error) {
           console.error('Error processing message:', error);
